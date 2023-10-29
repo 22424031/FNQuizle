@@ -1,0 +1,28 @@
+
+<form [formGroup]="validateForm" (ngSubmit)="submitForm()" novalidate> 
+  <div class="form-group" >
+    <label>username</label>
+    <mat-form-field appearance="outline">
+      <input  matInput type="text" formControlName="userName" placeholder="Enter your username" />
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <label>password</label>
+    <mat-form-field appearance="outline">
+      <input matInput type="text" formControlName="passWord" placeholder="Enter your password" />
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <label style="color: red;" >{{alertMSG}}</label>
+  </div>
+  <button style="width: 100%;" mat-raised-button color="primary" (click)="submitForm()" >Login</button>
+</form>
+
+
+
+<div style="display: flex;justify-content: space-around;flex-direction: row;margin-top: 10px;">
+  <a class="login-form-forgot">Forgot password</a>
+
+  <a class="font-weight-bold text-success" routerLink="/auth/signup">Create an account</a>
+</div>
+

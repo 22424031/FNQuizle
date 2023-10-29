@@ -1,0 +1,17 @@
+form {
+  padding-top: 32px;
+  padding-right: 32px;
+  overflow: hidden;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 16px;
+      font-weight: 700;
+      color: #586380;
+      text-transform: uppercase;
+    }
+  }
+}

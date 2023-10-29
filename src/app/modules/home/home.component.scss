@@ -1,0 +1,80 @@
+.home-btn {
+  padding: 30px 18px;
+  background-color: #4255ff !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.home-title {
+  font-size: 44px;
+  color: #2e3856;
+  font-weight: 700;
+  text-align: center;
+  line-height: 56px;
+}
+
+.banner {
+  height: 720px;
+  background: url("/assets/images/quizlet-banner.jpg") center/cover no-repeat;
+  padding: 160px;
+  .introduction {
+    color: #fff;
+    width: 600px;
+    &-title {
+      font-size: 44px;
+      line-height: 56px;
+      font-size: 700;
+    }
+    &-content {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    button {
+      margin-top: 40px;
+    }
+  }
+}
+
+.study-tools {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: #f6f7fb;
+
+  img {
+    height: 430px;
+  }
+}
+
+.promotions {
+  padding: 80px 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+
+  .home-title {
+    text-align: left;
+  }
+
+  div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  p {
+    font-size: 20px;
+    color: #2e3856;
+    line-height: 28px;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+}
