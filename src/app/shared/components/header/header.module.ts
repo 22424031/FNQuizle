@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { HeaderComponent } from './header.component';
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
+    NzIconModule
   ],
   declarations: [HeaderComponent],
   exports: [HeaderComponent],

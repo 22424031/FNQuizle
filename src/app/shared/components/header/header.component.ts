@@ -21,6 +21,16 @@ export class HeaderComponent implements OnInit {
   }
   logout(){
     localStorage.setItem('token','')
+    window.location.reload();
     this.router.navigateByUrl('/');
+  }
+  studyset(){
+
+  }
+  createfolder(){
+
+  }
+  createclass(){
+
   }
 }

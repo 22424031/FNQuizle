@@ -20,6 +20,11 @@ const routes: Routes = [
         (m) => m.PageNotFoundModule
       ),
   },
+  {
+    path: 'studyset',
+    loadChildren: () =>
+      import('./modules/studyset/studyset.module').then((m) => m.StudysetModule),
+  },
 ];
 
 @NgModule({

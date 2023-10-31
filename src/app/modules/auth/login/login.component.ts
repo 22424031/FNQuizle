@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
           if(spUser.status === 200){
             ("login ok");
             this.alertMSG = ''
+            window.location.reload();
             this.router.navigateByUrl("/");
           }
           else{

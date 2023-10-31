@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  xmlnamevalidator:
+    image: xmlnamevalidator
+    build:
+      context: node_modules/xml-name-validator
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "lib/xml-name-validator.js"]
