@@ -13,18 +13,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
+  
+  {
+    path: '',
+    loadChildren: () =>
+      import('./modules/studyset/studyset.module').then((m) => m.StudysetModule),
+  },
   {
     path: '**',
     loadChildren: () =>
       import('./modules/page-not-found/page-not-found.module').then(
         (m) => m.PageNotFoundModule
       ),
-  },
-  {
-    path: 'studyset',
-    loadChildren: () =>
-      import('./modules/studyset/studyset.module').then((m) => m.StudysetModule),
-  },
+  }
 ];
 
 @NgModule({

@@ -1,1 +1,85 @@
-<p>Create New Study set</p>
+
+
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Ex. Pizza" formControlName="title">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..." formControlName="comment"></textarea>
+    </mat-form-field>
+  </form>
+
+  <ol>
+    <li>
+      <mat-form-field>
+        <mat-label>What's your name topic</mat-label>
+        <input matInput [(ngModel)]="topic">
+      </mat-form-field>
+    </li>
+    <li>
+        <button (click)="openDialog()" mat-raised-button>
+            <span class="material-symbols-outlined"><img src="../../../assets/images/add_circle.png" />Topic</span>
+        </button>
+    </li>
+
+  </ol>
+  <div style="display: flex; flex-direction: column; width: 100%;">
+    <div  *ngFor="let section of numberOfSection" style="margin-bottom: 15px;margin-left: 5px;margin-right: 5px;" class="example-flex-container container100">
+        <div style="width: 100%;margin: 10px;border-bottom: double;" class="example-flex-container">
+            <p style="font-weight: bold;">1</p> 
+            <button mat-button>Remove</button>
+        </div>
+     
+     
+            <div  style="width: 100%;margin: 10px; " class="example-flex-container">
+                <div >
+                    <mat-label style="color: blueviolet;">Key</mat-label>
+                    <input type="text" matInput [formControl]="emailFormControl" 
+                        placeholder="Key word">
+                    <mat-hint>key word define</mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('keyword') && !emailFormControl.hasError('required')">
+                    Please enter a keyword
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        <strong>required</strong>
+                    </mat-error>
+                </div>
+                <div>
+                    <mat-label  style="color: blueviolet;">Definition</mat-label>
+                    <input type="text" matInput [formControl]="emailFormControl" 
+                        placeholder="Definition">
+                    <mat-hint>key word definition</mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('Definition') && !emailFormControl.hasError('required')">
+                    Please enter a definition
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        <strong>required</strong>
+                    </mat-error>
+                </div>
+                <img width="100" height="100" loading="eager" src="{{imgSelect}}" />
+            </div>
+            <mat-expansion-panel style="width: 100%; " (opened)="panelEventOpen()" (closed)="panelEventClose()">
+                <mat-expansion-panel-header >
+                    <mat-panel-description>
+                    Select Image {{panelOpenState ? 'open' : 'closed'}}
+                    <div style="margin: 5px;" *ngFor="let imgURL of imgs">
+                        <img width="70" height="70" loading="lazy" (click)="imgClick(imgURL)" src={{imgURL}} />
+                    </div>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <input placeholder="keyword search" [(ngModel)]="keyword" matInput type="text"/>
+                <button mat-stroked-button (click)="searchKeyword()">Search</button>
+               
+            </mat-expansion-panel>
+    </div>
+    <div class="example-flex-container ">
+        <button mat-raised-button style="margin: 15px;width: 150px;" (click)="addSection()">Add Section</button>
+        <button color="primary" mat-raised-button style="margin: 15px;width: 150px;">Save</button>
+    </div>
+
+  </div>
+  
