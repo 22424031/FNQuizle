@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule} from '@angular/material/dialog';
 import { DialogConfirmModule } from '../common/dialog-confirm/dialog-confirm.module';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { SearchImageModule } from '../common/search-image/search-image.module';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
      RouterModule.forChild(routes), 
      MatButtonModule,
       MatFormFieldModule,MatExpansionModule,
-      MatInputModule,MatIconModule, MatDialogModule, DialogConfirmModule
+      MatInputModule,MatIconModule, MatDialogModule, DialogConfirmModule, SearchImageModule
     ],
+    
 })
 export class StudysetModule { }

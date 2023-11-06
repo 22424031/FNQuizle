@@ -1,0 +1,8 @@
+<div style="display: flex;flex-direction: row !important;">
+    <div  style="margin: 5px;display: flex;flex-direction: row !important;" *ngFor="let imgURL of imgs">
+        <img width="70" height="70" loading="lazy" (click)="imgClick(imgURL)" src={{imgURL}} />
+    </div>
+</div>
+
+       
+        

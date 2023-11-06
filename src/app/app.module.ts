@@ -10,7 +10,6 @@ import { LoadingSpinnerModule } from './shared/components/loading-spinner/loadin
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { StudysetModule } from './modules/studyset/studyset.module';
 
 export function tokenGetter() {
   return localStorage.getItem("token");

@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
             ("login ok");
             this.alertMSG = ''
             window.location.reload();
-            this.router.navigateByUrl("/");
+            this.router.navigateByUrl("");
           }
           else{
             this.alertMSG = spUser.errorMessage;
