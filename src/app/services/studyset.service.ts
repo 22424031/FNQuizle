@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BaseResponse } from '../models/baseResponse';
 import { Token } from '../models/token'; 
-import { StudySet } from '../models/studySet';
+import { StudySet, StudySetDetail } from '../models/studySet';
 
 @Injectable({ providedIn: 'root' })
 export class StudySetService {
@@ -20,7 +20,15 @@ export class StudySetService {
     getAll( keyword:string):Observable<BaseResponse<string[]>> {
         return this.http.get<BaseResponse< string[]>>(`${environment.apiUrl}/StudySet/GetImageKeyWord?keyword=${keyword}`);
     }
-    createStudySet(studySet:any):Observable<BaseResponse<StudySet>>{
+    getStudySetList( userName:string):Observable<BaseResponse<StudySet[]>> {
+        return this.http.get<BaseResponse< StudySet[]>>(`${environment.apiUrl}/StudySet/GetListStudySet?userName=${userName}`);
+    }
+    getStudySetDetail( id:number):Observable<BaseResponse<StudySetDetail[]>> {
+        return this.http.get<BaseResponse< StudySetDetail[]>>(`${environment.apiUrl}/StudySet/GetStudySetDetail?id=${id}`);
+    }
+    createStudySet(studySet:StudySet):Observable<BaseResponse<StudySet>>{
+        let userName = localStorage.getItem('userName');
+        studySet.userName = userName;
         const httpHeader = new HttpHeaders().set('content-type', 'application/json').set('Access-Control-Allow-Origin', '*');
         let headers = new HttpHeaders({
             'Content-Type': 'application/json' });

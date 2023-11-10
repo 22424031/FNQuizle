@@ -1,0 +1,19 @@
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .mainStudy {
+
+    width: 600px;
+    height: 500px;
+    background-color: whitesmoke;
+    
+  }
+  .topbar{
+    display: flex;flex-direction: row;
+    margin: 10px;
+  }
+  .btn-next{
+    margin: 10px;
+  }

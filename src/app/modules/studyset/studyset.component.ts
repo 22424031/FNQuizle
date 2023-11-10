@@ -5,7 +5,7 @@ import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/fo
 import { StudySetService } from 'src/app/services/studyset.service';
 import { Section } from 'src/app/models/section';
 import { StudySet, StudySetDetail } from 'src/app/models/studySet';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-studyset',
@@ -23,7 +23,7 @@ export class StudysetComponent implements OnInit {
   //section = {"keyword":"", "description": "", "image":"", "urlimage":"", "isactive":true}
   numberOfSection:Section[] = [];
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  constructor(public dialog: MatDialog, private studyService : StudySetService) {}
+  constructor(public dialog: MatDialog, private studyService : StudySetService, private router:Router) {}
   panelOpenState = true;
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -135,6 +135,7 @@ export class StudysetComponent implements OnInit {
       {
         if(sp.status === 200){
           console.log("create ok");
+          this.router.navigateByUrl("studysetlist");
         }
         else{
           console.log("create fail");

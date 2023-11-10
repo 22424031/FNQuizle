@@ -51,6 +51,7 @@ export class AccountService {
                     console.log("login ok")
                     this.token = user.data;
                     localStorage.setItem('token', user.data.token);
+                    localStorage.setItem('userName', username);
                 }
               //  this.userSubject.next(user);
                 return user;

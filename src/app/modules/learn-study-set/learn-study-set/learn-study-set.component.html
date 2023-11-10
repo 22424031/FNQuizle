@@ -1,0 +1,33 @@
+<div style="display: flex;justify-content: center;align-items: center;">
+    <button  [disabled]="!isEnablePre" mat-button type="primary"  (click)="btnPre()" class="btn-next"><img src="../../../../assets/images/left-arrow.png"/></button>
+    <div class="mainStudy" *ngFor="let item of studysetDetailPaging">
+        <div style="display: flex;justify-content: space-between;flex-direction: row;">
+            <div class="topbar"> 
+                <img style="margin: 10px;" width="32px" height="32px" src="../../../../assets/images/bulb.png"/>
+                <p style="margin-top: 15px;">Get a hint</p>
+            </div>
+            <div class="topbar">
+                <img width="32px" height="32px" src="../../../../assets/images/sound.png"/>
+                <img width="32px" height="32px" src="../../../../assets/images/star.png"/>
+            </div>
+        </div>
+        <div style="justify-content: center;display: flex; flex-direction: row !important; ">
+            <div style="width: auto;margin-left: 10px;">
+                <img width="80px" height="80px" src="{{item.urlImage}}"/>
+            </div>
+            <div style="width: 100%;display: flex;align-items: center; margin-left: 10px;">
+                <input (keyup)="onKeyAnser($event)" style="width: 100%;height: 40px;" placeholder="Enter Key word" type="text"/>
+            </div>
+        </div>
+            
+       
+        <div class="example-flex-container">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <button mat-button [disabled]="!isEnableNext"  class="btn-next" (click)="btnNext()"> <img src="../../../../assets/images/right-arrow.png"/></button>
+</div>
+
+

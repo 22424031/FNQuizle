@@ -20,6 +20,12 @@ const routes: Routes = [
       import('./modules/studyset/studyset.module').then((m) => m.StudysetModule),
   },
   {
+    path: '',
+    loadChildren: () => 
+      import('./modules/learn-study-set/learn-study-set.module').then((m) => m.LearnStudySetModule),
+  }
+  ,
+  {
     path: '**',
     loadChildren: () =>
       import('./modules/page-not-found/page-not-found.module').then(

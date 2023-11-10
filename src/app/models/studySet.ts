@@ -1,4 +1,6 @@
 export class StudySet{
+    userName:string;
+    id:number;
     title:string;
     description:string
     keywordLang:string
@@ -7,7 +9,8 @@ export class StudySet{
 }
 export class StudySetDetail {
     keyword:string
-    description:string
-    urlImage:string
+    description:string;
+    image: Blob
+    urlImage:any | string
     isActive:boolean
 }

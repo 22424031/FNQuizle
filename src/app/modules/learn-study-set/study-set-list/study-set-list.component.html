@@ -1,0 +1,8 @@
+<div *ngIf="studySetList" style="display: flex;flex-direction: row;justify-content: space-evenly;">
+    <div *ngFor="let item of studySetList" >
+        <button (click)="studysetdetail(item.id)" mat-button style="background-color: #CCFFFF; width: 200px;height: 100px; border-radius: 20px;">
+            <p class="title">{{item.title}}</p>
+            <p class="title">{{item.description}}</p>
+        </button>
+    </div>
+</div>
