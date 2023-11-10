@@ -14,6 +14,7 @@ export class StudySetListComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    
     let username = localStorage.getItem("userName");
     this.studySetService.getStudySetList(username).subscribe(sp => {
      if(sp.status === 200){

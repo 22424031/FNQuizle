@@ -11,11 +11,13 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { DialogConfirmModule } from '../common/dialog-confirm/dialog-confirm.module';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { SearchImageModule } from '../common/search-image/search-image.module';
+import { AuthGuard } from 'src/app/services/authGuard';
 
 const routes: Routes = [
   {
     path: 'studyset',
     component: StudysetComponent,
+    canActivate: [AuthGuard]
   },
 ];
 @NgModule({

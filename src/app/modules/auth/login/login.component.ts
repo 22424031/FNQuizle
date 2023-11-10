@@ -24,8 +24,13 @@ export class LoginComponent implements OnInit {
           if(spUser.status === 200){
             ("login ok");
             this.alertMSG = ''
-            window.location.reload();
-            this.router.navigateByUrl("");
+            
+            setTimeout(() => {
+              window.location.reload();
+              
+            }, 500);
+            this.router.navigateByUrl("studysetlist");
+          
           }
           else{
             this.alertMSG = spUser.errorMessage;

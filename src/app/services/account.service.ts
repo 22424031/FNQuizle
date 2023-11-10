@@ -33,8 +33,7 @@ export class AccountService {
          
         //check wherether the token is expired and return
         // true or false
-        //return !this.jwtHelper.isTokenExpired(token);
-            return true;
+            return !this.jwtHelper.isTokenExpired(token);
         }
         return false;
        }
@@ -51,6 +50,7 @@ export class AccountService {
                     console.log("login ok")
                     this.token = user.data;
                     localStorage.setItem('token', user.data.token);
+                    localStorage.setItem('refeshtoken', user.data.refreshToken);
                     localStorage.setItem('userName', username);
                 }
               //  this.userSubject.next(user);
@@ -77,8 +77,6 @@ export class AccountService {
                     }
                     return user;
             }));
-       
-        
     }
 
     getAll() {
