@@ -72,11 +72,11 @@ export class LearnStudySetComponent implements OnInit {
     {
       this.isEnableNext = false;
       this.index -= 1
-      this.updateAnser(this.index)
+  
       return;
     }
     else{
-      this.updateAnser(this.index-2)
+    
       this.studysetDetailPaging.splice(0, this.studysetDetailPaging.length);
       this.studysetDetailPaging.push(this.studysetDetail[this.index])
       //this.index += 1
@@ -123,7 +123,11 @@ export class LearnStudySetComponent implements OnInit {
 
   }
   onKeyAnser(event:any){
+    setTimeout(() => {
+      
+    }, 500);
+    console.log('current index update' + this.index)
     this.anserKey = event.target.value
-
+    this.updateAnser(this.index-1)
   }
 }
