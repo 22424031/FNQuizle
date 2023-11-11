@@ -13,11 +13,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { HomeGuard } from 'src/app/services/homeguard';
 
 const routes: Routes = [
   {
     path: ':section',
     component: AuthComponent,
+  
   }
 ];
 

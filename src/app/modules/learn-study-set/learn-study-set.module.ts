@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'learnstudyset',
     component: LearnStudySetComponent,
-    canActivate: [AuthGuard]
+    
   },
   {
     path: 'studysetlist',

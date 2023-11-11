@@ -22,10 +22,11 @@
             
        
         <div class="example-flex-container">
-            <div></div>
-            <div></div>
-            <div></div>
+            <button [hidden]="!isHiddenResult" (click)="btnTestAgain()" style="color:blue;" mat-raised-button>Test Again</button>
+            <button [hidden]="isHiddenResult" (click)="btnResult()" style="color:blue;" mat-raised-button>Result</button>
+            <label>{{lbResult}}</label>
         </div>
+        
     </div>
     <button mat-button [disabled]="!isEnableNext"  class="btn-next" (click)="btnNext()"> <img src="../../../../assets/images/right-arrow.png"/></button>
 </div>

@@ -1,7 +1,9 @@
 .example-flex-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items:end;
     flex-wrap: wrap;
+    margin-top: 310px;
   }
   .mainStudy {
 

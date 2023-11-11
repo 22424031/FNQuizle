@@ -6,7 +6,7 @@ import { AccountService } from './account.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class HomeGuard implements CanActivate {
 
 
   connection!:boolean;
@@ -17,10 +17,11 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): boolean {
     if(!this.authService.isAuthenticated()){
-        this.router.navigateByUrl('auth/login'); 
-        return false;
+        localStorage.setItem('token','')
+       
     }
-    return true
+    return true;
+   
   }
   
 }
