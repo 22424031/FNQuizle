@@ -41,6 +41,7 @@ export class SignUpComponent implements OnInit {
         
       });
     } else {
+      console.log('error info user ');
       Object.values(this.validateForm.controls).forEach(control => {
         if (control.invalid) {
           control.markAsDirty();
@@ -53,7 +54,7 @@ export class SignUpComponent implements OnInit {
   constructor( private account:AccountService,  private router:Router, private formBuilder: FormBuilder) {}
   ngOnInit(): void {
     this.validateForm = this.formBuilder.group({
-      username: new FormControl('', [Validators.required,Validators.minLength(8)]),
+      username: new FormControl('', [Validators.required,Validators.minLength(6)]),
       full_name: new FormControl('', [Validators.required,Validators.minLength(6)]),
       password: new FormControl('', [Validators.required,Validators.minLength(8)]),
       confirmpassword: new FormControl('', [Validators.required,Validators.minLength(8)]),

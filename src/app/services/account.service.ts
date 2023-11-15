@@ -66,6 +66,7 @@ export class AccountService {
     }
 
     register(user: any):Observable<BaseResponse<Token>>{
+        console.log('info user '+ user);
         return this.http.post<BaseResponse<Token>>(`${environment.apiUrl}/User/CreateUser`, user)
             .pipe(map(user => {
                     if(user.status === 200)
@@ -73,7 +74,8 @@ export class AccountService {
                         console.log("register ok")
                         this.token = user.data;
                         localStorage.setItem('token', user.data.token);
-                        localStorage.setItem('username', user.data.userName);
+                        localStorage.setItem('userName', user.data.userName);
+                        localStorage.setItem('refeshtoken', user.data.refreshToken);
                     }
                     return user;
             }));

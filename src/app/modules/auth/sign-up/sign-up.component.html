@@ -4,6 +4,7 @@
     <mat-form-field appearance="outline">
       <mat-label>Choose a date</mat-label>
       <input matInput [matDatepicker]="picker" formControlName="date_of_birth" />
+      <mat-hint align="end">chọn một ngày sinh</mat-hint>
       <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -12,32 +13,35 @@
     <label>full name</label>
     <mat-form-field appearance="outline">
       <input matInput type="text" minlength="6" #fullname formControlName="full_name" placeholder="Enter your Full Name" />
-      <mat-hint align="end">{{fullname.value.length}}</mat-hint>
+      <mat-hint align="end">{{fullname.value.length}} ít nhất 8 ký tự</mat-hint>
     </mat-form-field>
   </div>
   <div class="form-group">
     <label>email</label>
     <mat-form-field appearance="outline">
-      <input matInput type="email" formControlName="email" placeholder="Enter your Email" />
-
+      <input matInput type="email" #email formControlName="email" placeholder="Enter your Email" />
+      <mat-hint align="end">Email tempalte: ABC@gmail.com </mat-hint>
     </mat-form-field>
   </div>
   <div class="form-group">
     <label>username</label>
     <mat-form-field appearance="outline">
-      <input matInput type="text" formControlName="username" placeholder="Enter your username" />
+      <input matInput type="text" #userName formControlName="username" placeholder="Enter your username" />
+      <mat-hint align="end">{{userName.value.length}} ít nhất 6 ký tự</mat-hint>
     </mat-form-field>
   </div>
   <div class="form-group">
     <label>password</label>
     <mat-form-field appearance="outline">
-      <input matInput type="password" formControlName="password" placeholder="Enter your password" />
+      <input matInput type="password" #password formControlName="password" placeholder="Enter your password" />
+      <mat-hint align="end">{{password.value.length}} ít nhất 8 ký tự</mat-hint>
     </mat-form-field>
   </div>
   <div class="form-group">
     <label>confirm password</label>
     <mat-form-field appearance="outline">
-      <input matInput type="password" formControlName="confirmpassword" placeholder="Please confirm your password" />
+      <input matInput type="password" #confirmpassword formControlName="confirmpassword" placeholder="Please confirm your password" />
+      <mat-hint align="end">{{confirmpassword.value.length}} ít nhất 8 ký tự</mat-hint>
     </mat-form-field>
   </div>
   <label>{{alertMSG}}</label>
