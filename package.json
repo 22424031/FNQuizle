@@ -16,9 +16,9 @@
   "dependencies": {
     "@angular/animations": "^16.2.0",
     "@angular/cdk": "^16.2.6",
-    "@angular/common": "^17.0.0",
+    "@angular/common": "^17.0.0 --force",
     "@angular/compiler": "^16.2.0",
-    "@angular/core": "^16.2.0 --force",
+    "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.11",
     "@angular/material": "^16.2.6",
     "@angular/platform-browser": "^16.2.0",
