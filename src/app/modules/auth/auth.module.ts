@@ -10,7 +10,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
-import { NzButtonModule } from 'ng-zorro-antd/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeGuard } from 'src/app/services/homeguard';
@@ -33,7 +32,7 @@ const routes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    NzButtonModule,
+    
     MatIconModule,
     FormsModule,ReactiveFormsModule,
   ],
