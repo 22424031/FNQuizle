@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "demo study set",
   "scripts": {
-    "build":"CI= npm build",
+    "build":"CI= npm run build",
     "start": "npm start",
     "onPreBuild":"@netlify/angular-runtime"
   },
