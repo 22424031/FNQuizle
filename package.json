@@ -1,4 +1,12 @@
 {
+  "name": "quizstudy",
+  "version": "1.0.0",
+  "description": "demo study set",
+  "scripts": {
+    "build":"npm run build",
+    "start": "npm start"
+  },
+  "author": "trutran",
   "dependencies": {
     "@angular-devkit/build-angular": "^17.0.1",
     "@angular-devkit/core": "^17.0.1",
