@@ -2,11 +2,7 @@
   "name": "quizstudy",
   "version": "1.0.0",
   "description": "demo study set",
-  "scripts": {
-    "build":"CI= npm run build",
-    "start": "npm start",
-    "onPreBuild":"@netlify/angular-runtime"
-  },
+
   "author": "trutran",
   "dependencies": {
     "@angular-devkit/build-angular": "^17.0.1",
