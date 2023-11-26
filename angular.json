@@ -100,6 +100,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/quizlet",
+            "netlifyToken": "nfp_5FkHfgjb6jvT5BVGha3TzAPxgGb2eubDa75c",
+            "siteId": "42af1760-043e-41b6-899c-c46749af370d"
+          }
         }
       }
     }

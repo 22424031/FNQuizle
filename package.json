@@ -2,7 +2,6 @@
   "name": "quizstudy",
   "version": "1.0.0",
   "description": "demo study set",
-
   "author": "trutran",
   "dependencies": {
     "@angular-devkit/build-angular": "^17.0.1",
@@ -13,6 +12,7 @@
     "@angular/platform-browser-dynamic": "^17.0.3",
     "@angular/router": "^17.0.3",
     "@auth0/angular-jwt": "^5.2.0",
+    "@netlify-builder/deploy": "^5.0.0",
     "@netlify/angular-runtime": "^2.0.2",
     "package.json": "^2.0.1",
     "rxjs": "^7.8.1"

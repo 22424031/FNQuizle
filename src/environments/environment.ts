@@ -6,7 +6,7 @@
 
 
 export const environment = {
-  apiUrl:'https://localhost:7287/api',
+  apiUrl:'https://quizbeapi.azurewebsites.net/api',
   envName: 'DEV',
   production: false,
   test: false,
