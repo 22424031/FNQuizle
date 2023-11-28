@@ -1,8 +1,9 @@
 # example netlify.toml
 [build]
-  command = "ng build --prod"
+  command = "npm run build"
   functions = "netlify/functions"
-  publish = "dist/quizlet/browser"
+  publish = "./dist/quizlet"
+
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
@@ -18,3 +19,8 @@
   #  publish = "dist" # Folder with the static content for _redirect file
 
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
+
+
+[[edge_functions]]
+function = "fact"
+path = "/test"
