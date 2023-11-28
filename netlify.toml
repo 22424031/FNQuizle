@@ -1,7 +1,7 @@
 # example netlify.toml
 [build]
   command = "npm rebuild"
-  publish = "/opt/build/repo/dist/quizlet/browser"
+  publish = "./dist/quizlet/browser"
   functions = "netlify/functions"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
