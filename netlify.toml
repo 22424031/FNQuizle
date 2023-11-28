@@ -1,8 +1,8 @@
 # example netlify.toml
 [build]
   command = "npm rebuild"
+  publish: /opt/build/repo/dist/quizlet/browser
   functions = "netlify/functions"
-  commandOrigin: config
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
